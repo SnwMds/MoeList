@@ -241,7 +241,6 @@
     <string name="german">Almanca</string>
     <string name="copied">Kopyalandı!</string>
     <string name="login_browser_warning">Eğer giriş yapamıyorsanız, farklı bir tarayıcı ile deneyin.</string>
-    <string name="send_analytics">Kullanım verilerini gönder</string>
     <string name="analytics_summary">Bu, uygulamanın geliştirilmesine yardımcı olur</string>
     <string name="github_sponsor">Projeye sponsor olun 💰</string>
     <string name="parent_story">Ana hikaye</string>

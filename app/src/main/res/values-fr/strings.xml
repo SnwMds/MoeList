@@ -241,7 +241,6 @@
     <string name="german">Allemand</string>
     <string name="copied">Copié!</string>
     <string name="login_browser_warning">Essayez avec un autre navigateur si vous ne pouvez pas vous connecter.</string>
-    <string name="send_analytics">Envoyer les données d\'utilisation</string>
     <string name="analytics_summary">Cela aide à améliorer l\'application</string>
     <string name="github_sponsor">Sponsorisez le projet 💰</string>
     <string name="parent_story">Histoire parente</string>

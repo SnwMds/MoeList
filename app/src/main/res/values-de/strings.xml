@@ -241,7 +241,6 @@
     <string name="german">Deutsch</string>
     <string name="copied">Kopiert!</string>
     <string name="login_browser_warning">Versuchen Sie es mit einem anderen Browser, wenn Sie sich nicht einloggen können.</string>
-    <string name="send_analytics">Analysen senden</string>
     <string name="analytics_summary">Dies hilft die App zu verbessern</string>
     <string name="github_sponsor">Unterstütze das Projekt 💰</string>
     <string name="parent_story">Hauptgeschichte</string>

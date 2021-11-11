@@ -8,7 +8,6 @@ import com.axiel7.moelist.data.network.Api
 import com.axiel7.moelist.data.network.KtorClient
 import com.axiel7.moelist.data.room.AnimeDatabase
 import com.axiel7.moelist.utils.SharedPrefsHelpers
-import com.google.firebase.analytics.FirebaseAnalytics
 import io.ktor.client.*
 import okhttp3.OkHttpClient
 
@@ -23,10 +22,6 @@ class App : Application(), ImageLoaderFactory {
         }
 
         animeDb = AnimeDatabase.getAnimeDatabase(applicationContext)
-
-        FirebaseAnalytics.getInstance(applicationContext).apply {
-            setAnalyticsCollectionEnabled(sendAnalytics)
-        }
     }
     override fun newImageLoader(): ImageLoader {
         return ImageLoader.Builder(applicationContext)
@@ -56,9 +51,6 @@ class App : Application(), ImageLoaderFactory {
 
         val refreshToken: String
         get() = SharedPrefsHelpers.instance?.getString("refresh_token", "null") ?: "null"
-
-        val sendAnalytics: Boolean
-        get() = SharedPrefsHelpers.instance?.getBoolean("send_analytics", true) ?: true
 
         lateinit var animeDb: AnimeDatabase
         private lateinit var ktorClient: HttpClient

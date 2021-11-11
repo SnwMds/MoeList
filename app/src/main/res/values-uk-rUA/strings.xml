@@ -241,7 +241,6 @@
     <string name="german">Німецькою</string>
     <string name="copied">Скопійовано!</string>
     <string name="login_browser_warning">Якщо ви не можете увійти спробуйте інший браузер.</string>
-    <string name="send_analytics">Надсилати аналітику</string>
     <string name="analytics_summary">Це допомагає покращити додаток</string>
     <string name="github_sponsor">Спонсорувати проект 💰</string>
     <string name="parent_story">Головна історія</string>

@@ -241,7 +241,6 @@
     <string name="german">الألمانية</string>
     <string name="copied">تم النسخ!</string>
     <string name="login_browser_warning">حاول مع متصفح آخر إذا لم تتمكن من تسجيل الدخول.</string>
-    <string name="send_analytics">إرسال تحليلات الاستخدام</string>
     <string name="analytics_summary">هذا سيساعد في تحسين التطبيق</string>
     <string name="github_sponsor">راعي المشروع 💰</string>
     <string name="parent_story">القصة الأم</string>
