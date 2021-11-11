@@ -27,11 +27,7 @@ import com.axiel7.moelist.utils.StringExtensions.formatStatus
 import com.axiel7.moelist.utils.StringExtensions.formatWeekday
 import com.axiel7.moelist.utils.UseCases.copyToClipBoard
 import com.google.android.material.chip.Chip
-import com.google.mlkit.common.model.DownloadConditions
-import com.google.mlkit.nl.translate.TranslateLanguage
-import com.google.mlkit.nl.translate.Translation
-import com.google.mlkit.nl.translate.Translator
-import com.google.mlkit.nl.translate.TranslatorOptions
+
 import kotlinx.coroutines.flow.collectLatest
 import java.text.NumberFormat
 import java.util.*
@@ -101,28 +97,6 @@ class AnimeDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
         }
 
         binding.loadingTranslate.hide()
-        //Translate
-        if (Locale.getDefault().language == "en") {
-            binding.translateButton.visibility = View.GONE
-        }
-        else {
-            val options = TranslatorOptions.Builder()
-                .setSourceLanguage(TranslateLanguage.ENGLISH)
-                .setTargetLanguage(TranslateLanguage.fromLanguageTag(Locale.getDefault().language)!!)
-                .build()
-            val translator = Translation.getClient(options)
-            lifecycle.addObserver(translator)
-            binding.translateButton.setOnClickListener {
-                if (binding.synopsis.text == viewModel.animeDetails.value?.synopsis) {
-                    binding.loadingTranslate.show()
-                    translateSynopsis(translator)
-                }
-                else {
-                    binding.translateButton.text = resources.getString(R.string.translate)
-                    binding.synopsis.text = viewModel.animeDetails.value?.synopsis
-                }
-            }
-        }
 
         //Synopsis
         binding.synopsisIcon.setOnClickListener {
@@ -300,31 +274,6 @@ class AnimeDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
                 setData(animeDetails.endingThemes)
             }
         }
-    }
-
-    private fun translateSynopsis(translator: Translator) {
-        val conditions = DownloadConditions.Builder()
-            .requireWifi()
-            .build()
-        translator.downloadModelIfNeeded(conditions)
-            .addOnSuccessListener {
-                try {
-                    translator.translate(binding.synopsis.text as String)
-                        .addOnSuccessListener { translatedText ->
-                            binding.loadingTranslate.hide()
-                            binding.translateButton.text = resources.getString(R.string.translate_original)
-                            binding.synopsis.text = translatedText
-                        }
-                        .addOnFailureListener { exception ->
-                            showSnackbar(exception.localizedMessage)
-                        }
-                } catch (e: IllegalStateException) {
-                    Log.d("MoeLog", e.message?:"")
-                }
-            }
-            .addOnFailureListener { exception ->
-                showSnackbar(exception.localizedMessage)
-            }
     }
 
 }
