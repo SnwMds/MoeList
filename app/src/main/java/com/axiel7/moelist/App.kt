@@ -28,11 +28,6 @@ class App : Application(), ImageLoaderFactory {
             .crossfade(true)
             .crossfade(500)
             .error(R.drawable.ic_launcher_foreground)
-            .okHttpClient {
-                OkHttpClient.Builder()
-                    .cache(CoilUtils.createDefaultCache(applicationContext))
-                    .build()
-            }
             .build()
     }
 
