@@ -17,9 +17,9 @@ jobs:
         java-version: 17
         distribution: adopt
     - name: Build with Gradle
-      run: ./gradlew assembleDebug --no-daemon
+      run: ./gradlew assemble --no-daemon
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
-        name: app-debug.apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+        name: app-release-unsigned.apk
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
