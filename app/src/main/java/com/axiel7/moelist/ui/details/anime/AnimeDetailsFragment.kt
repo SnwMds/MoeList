@@ -91,8 +91,6 @@ class AnimeDetailsFragment : BaseFragment<FragmentDetailsBinding>() {
             true
         }
 
-        binding.loadingTranslate.hide()
-
         //Synopsis
         binding.synopsisIcon.setOnClickListener {
             if (binding.synopsis.maxLines == 5) {
