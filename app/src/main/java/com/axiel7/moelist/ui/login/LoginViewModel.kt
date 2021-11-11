@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.axiel7.moelist.data.model.AccessToken
 import com.axiel7.moelist.data.network.Api
 import com.axiel7.moelist.data.network.KtorClient
-import com.axiel7.moelist.private.ClientId
 import com.axiel7.moelist.utils.Constants.MAL_OAUTH2_URL
 import com.axiel7.moelist.utils.PkceGenerator
 import io.ktor.client.*
@@ -22,7 +21,7 @@ class LoginViewModel : ViewModel() {
     private val api: Api by lazy { Api(ktorClient) }
 
     private val codeVerifier = PkceGenerator.generateVerifier(length = 128)
-    val loginUrl = "${MAL_OAUTH2_URL}authorize?response_type=code&client_id=${ClientId.CLIENT_ID}&code_challenge=${codeVerifier}&state=$STATE"
+    val loginUrl = "${MAL_OAUTH2_URL}authorize?response_type=code&client_id=9d64c3963e0f5de53083571d45016565&code_challenge=${codeVerifier}&state=$STATE"
 
     private val _accessToken = MutableStateFlow<AccessToken?>(null)
     val accessToken: StateFlow<AccessToken?> = _accessToken
@@ -30,7 +29,7 @@ class LoginViewModel : ViewModel() {
     fun getAccessToken(code: String) {
         viewModelScope.launch {
             val call = async { api.getAccessToken(
-                clientId = ClientId.CLIENT_ID,
+                clientId = "9d64c3963e0f5de53083571d45016565",
                 code = code,
                 codeVerifier = codeVerifier,
                 grantType = "authorization_code"
