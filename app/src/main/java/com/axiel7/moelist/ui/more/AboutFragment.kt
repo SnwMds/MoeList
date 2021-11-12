@@ -10,7 +10,6 @@ import androidx.preference.PreferenceFragmentCompat
 import com.axiel7.moelist.BuildConfig
 import com.axiel7.moelist.R
 import com.axiel7.moelist.ui.main.MainActivity
-import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 
 class AboutFragment : PreferenceFragmentCompat() {
 
@@ -64,10 +63,5 @@ class AboutFragment : PreferenceFragmentCompat() {
             true
         }
 
-        val licenses = findPreference<Preference>("licenses")
-        licenses?.setOnPreferenceClickListener {
-            startActivity(Intent(safeContext, OssLicensesMenuActivity::class.java))
-            true
-        }
     }
 }
