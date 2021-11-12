@@ -24,9 +24,4 @@
         app:title="@string/credits"
         app:summary="@string/credits_summary"
         app:icon="@drawable/ic_round_group_24"/>
-
-    <Preference
-        app:key="licenses"
-        app:title="@string/open_source_licenses"/>
-
 </PreferenceScreen>
