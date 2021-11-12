@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">MoeList</string>
+    <string name="app_name" translatable="false">MoeList Libre</string>
     <string name="title_home">Home</string>
     <string name="title_anime_list">Anime</string>
     <string name="title_manga_list">Manga</string>
@@ -134,7 +134,7 @@
     <string name="startup">Startup</string>
     <string name="account">Account</string>
     <string name="logout">Log Out</string>
-    <string name="logout_summary">Log out only from MoeList, not MAL.</string>
+    <string name="logout_summary">Log out only from MoeList Libre, not MAL.</string>
     <string name="other">Other</string>
     <string name="version">Version</string>
     <string name="discord" translatable="false">Discord</string>
@@ -157,7 +157,7 @@
     <string name="title_seasonal">Seasonal</string>
     <string name="synopsis_icon">Expand synopsis</string>
     <string name="poster">Poster</string>
-    <string name="moelist_banner">MoeList banner</string>
+    <string name="moelist_banner">MoeList Libre banner</string>
     <string name="drag_pill">Drag pill</string>
     <string name="profile_picture">Profile picture</string>
     <string name="purchase_cancelled">Purchase cancelled</string>

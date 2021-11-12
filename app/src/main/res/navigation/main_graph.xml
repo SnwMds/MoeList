@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.axiel7.moelist.ui.home.HomeFragment"
+        android:name="com.amanoteam.moelistlibre.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -41,7 +41,7 @@
 
     <fragment
         android:id="@+id/navigation_anime_list"
-        android:name="com.axiel7.moelist.ui.list.HostListFragment"
+        android:name="com.amanoteam.moelistlibre.ui.list.HostListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_host_list" >
         <argument
@@ -58,7 +58,7 @@
 
     <fragment
         android:id="@+id/navigation_manga_list"
-        android:name="com.axiel7.moelist.ui.list.HostListFragment"
+        android:name="com.amanoteam.moelistlibre.ui.list.HostListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_host_list" >
         <argument
@@ -75,12 +75,12 @@
 
     <fragment
         android:id="@+id/fragmentProfile"
-        android:name="com.axiel7.moelist.ui.profile.ProfileFragment"
+        android:name="com.amanoteam.moelistlibre.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/animeDetailsFragment"
-        android:name="com.axiel7.moelist.ui.details.anime.AnimeDetailsFragment"
+        android:name="com.amanoteam.moelistlibre.ui.details.anime.AnimeDetailsFragment"
         android:label="fragment_anime_details"
         tools:layout="@layout/fragment_details" >
         <action
@@ -90,7 +90,7 @@
     </fragment>
     <fragment
         android:id="@+id/mangaDetailsFragment"
-        android:name="com.axiel7.moelist.ui.details.manga.MangaDetailsFragment"
+        android:name="com.amanoteam.moelistlibre.ui.details.manga.MangaDetailsFragment"
         android:label="fragment_manga_details"
         tools:layout="@layout/fragment_details" >
         <action
@@ -99,7 +99,7 @@
     </fragment>
     <fragment
         android:id="@+id/hostSearchFragment"
-        android:name="com.axiel7.moelist.ui.search.HostSearchFragment"
+        android:name="com.amanoteam.moelistlibre.ui.search.HostSearchFragment"
         android:label="fragment_host_search"
         tools:layout="@layout/fragment_host_search" >
         <action
@@ -118,7 +118,7 @@
     <action android:id="@+id/action_global_hostSearchFragment" app:destination="@id/hostSearchFragment" />
     <fragment
         android:id="@+id/navigation_more"
-        android:name="com.axiel7.moelist.ui.more.MoreFragment"
+        android:name="com.amanoteam.moelistlibre.ui.more.MoreFragment"
         android:label="MoreFragment"
         tools:layout="@layout/fragment_more"/>
     <action
@@ -127,7 +127,7 @@
         app:restoreState="true"/>
     <fragment
         android:id="@+id/animeRankingFragment"
-        android:name="com.axiel7.moelist.ui.ranking.HostRankingFragment"
+        android:name="com.amanoteam.moelistlibre.ui.ranking.HostRankingFragment"
         android:label="fragment_host_ranking"
         tools:layout="@layout/fragment_host_ranking">
         <argument
@@ -143,7 +143,7 @@
     </fragment>
     <fragment
         android:id="@+id/mangaRankingFragment"
-        android:name="com.axiel7.moelist.ui.ranking.HostRankingFragment"
+        android:name="com.amanoteam.moelistlibre.ui.ranking.HostRankingFragment"
         android:label="fragment_host_ranking"
         tools:layout="@layout/fragment_host_ranking">
         <argument
@@ -159,7 +159,7 @@
     </fragment>
     <fragment
         android:id="@+id/seasonalFragment"
-        android:name="com.axiel7.moelist.ui.seasonal.SeasonalFragment"
+        android:name="com.amanoteam.moelistlibre.ui.seasonal.SeasonalFragment"
         android:label="fragment_seasonal"
         tools:layout="@layout/fragment_seasonal" >
         <action
@@ -171,13 +171,13 @@
     </fragment>
     <fragment
         android:id="@+id/fullPosterFragment"
-        android:name="com.axiel7.moelist.ui.details.FullPosterFragment"
+        android:name="com.amanoteam.moelistlibre.ui.details.FullPosterFragment"
         android:label="fragment_full_poster"
         tools:layout="@layout/fragment_full_poster" />
     <action android:id="@+id/action_global_fullPosterFragment" app:destination="@id/fullPosterFragment" /><action android:id="@+id/action_global_animeDetailsFragment" app:destination="@id/animeDetailsFragment"/><action android:id="@+id/action_global_mangaDetailsFragment" app:destination="@id/mangaDetailsFragment"/>
     <fragment
         android:id="@+id/hostCalendarFragment"
-        android:name="com.axiel7.moelist.ui.calendar.HostCalendarFragment"
+        android:name="com.amanoteam.moelistlibre.ui.calendar.HostCalendarFragment"
         android:label="fragment_host_calendar"
         tools:layout="@layout/fragment_host_calendar" >
         <action
