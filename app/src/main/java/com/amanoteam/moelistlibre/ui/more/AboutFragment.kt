@@ -52,7 +52,7 @@ class AboutFragment : PreferenceFragmentCompat() {
         val github = findPreference<Preference>("github")
         github?.setOnPreferenceClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://github.com/axiel7/MoeList")
+            intent.data = Uri.parse("https://github.com/SnwMds/MoeList-Libre")
             startActivity(intent)
             true
         }
